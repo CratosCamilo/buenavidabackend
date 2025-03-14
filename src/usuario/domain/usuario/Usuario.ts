@@ -19,19 +19,6 @@ export default class Usuario extends AbstractUsuario {
             rol: datosUsuario.rol,
             fechaRegistro: datosUsuario.fechaRegistro ?? new Date(),
         });
-    }
+    }  
     
-
-    public static fromSQL(row: any): Usuario {
-        return new Usuario({
-          id: row.ID_USUARIO,
-          nombre: row.NOMBRE,
-          apellido: row.APELLIDO,
-          correo: row.CORREO,
-          contraseña: row.CONTRASEÑA,
-          direccion: row.DIRECCION,
-          rol: row.ROL,
-          fechaRegistro: row.FECHA_REGISTRO
-        });
-    }
 }
